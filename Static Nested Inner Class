@@ -1,0 +1,17 @@
+package com.atul.learning.nonstaticinnerclass;
+
+public class StaticNestedInnerClass {
+	
+	static class Nested_Inner{
+		public void meth(){
+			System.out.println("inside of the static nested inner class");
+		}
+	}
+	
+	public static void main(String[] args) {
+		StaticNestedInnerClass.Nested_Inner ni=new StaticNestedInnerClass.Nested_Inner();
+		ni.meth();
+	}
+	
+
+}
