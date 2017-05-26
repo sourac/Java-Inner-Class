@@ -1,0 +1,22 @@
+package com.atul.learning.nonstaticinnerclass;
+
+public class LocalInnerClassExample {
+	
+	void my_method(){
+		int num=23;
+		class MethodInnerClassExample{
+			public void print(){
+			System.out.println("this is local inner class : " + num );	
+			}
+		}
+		MethodInnerClassExample mic=new MethodInnerClassExample();
+		mic.print();
+	}
+	
+	public static void main(String[] args) {
+		LocalInnerClassExample lc=new LocalInnerClassExample();
+		lc.my_method();
+	}
+	
+
+}
