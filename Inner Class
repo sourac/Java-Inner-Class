@@ -1,0 +1,46 @@
+package com.atul.learning.nonstaticinnerclass;
+
+/*inner class in java is a security mechanism.
+ * As we know if a class is private it cannot be inherited.so mostly class are made public
+ * instead of private but classes can be made private if the class is member of another class.
+ * then the inner class can be made private.
+ * And then it is used to access private member of class.
+ * 
+ * Inner classes are of three types:
+ * 1. inner class
+ * 2. local inner class
+ * 3. Anonymous inner class 
+ * */
+
+/*
+ * Inner class creation is the simplest task.
+ * we just need to create a class within a class
+ * and an inner class can be made private and once declared private inner clalss cannor be accessed
+ * by object of outside class.
+ * 
+ * */
+
+class Outer {
+
+	int num;
+
+	private class Inner {
+		public void print() {
+			System.out.println("this is an inner class");
+		}
+	}
+
+	void display_Inner() {
+		Inner inner = new Inner();
+		inner.print();
+	}
+
+}
+
+public class MyClass {
+	public static void main(String[] args) {
+		Outer out=new Outer();
+		out.display_Inner();
+
+	}
+}
