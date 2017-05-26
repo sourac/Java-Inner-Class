@@ -1,0 +1,23 @@
+package com.atul.learning.nonstaticinnerclass;
+
+ class OuterD {
+
+	private int num = 70;
+
+	public class InnerD {
+		public int getNum() {
+			System.out.println("inside getNum of InnerD");
+			return num;
+		}
+	}
+
+}
+
+public class Test{
+	public static void main(String[] args) {
+		OuterD od=new OuterD();
+		OuterD.InnerD id=od.new InnerD();
+		System.out.println(id.getNum());
+	}
+	
+}
